@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javamon Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="logo">
+        <img src="/images/logos/javamon.png" alt="logo">
+    </div>
+    <div class="credentialContainer">
+        <form onsubmit="login(event)">
+            <h2>Login</h2>
+
+            <input id="loginUser" placeholder="Username" required>
+            <input id="loginPass" placeholder="Password" type="password" required>
+
+            <a href="index.html">Don't have an account?</a>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+<script src="js/auth.js"></script>
+
+</body>
+</html>
