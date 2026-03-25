@@ -1,14 +1,17 @@
+function showError(message) {
+    const errorElement = document.getElementById("errorMessage");
+    if (errorElement) {
+        errorElement.textContent = message;
+        errorElement.style.display = "block";
+    }
+}
+
 async function register(event){
 
     event.preventDefault()
 
     const username = document.getElementById("regUser").value.trim();
     const password = document.getElementById("regPass").value.trim();
-
-    if (username === "" || password === "") {
-        alert("Fill in all fields");
-        return;
-    }
 
     const response = await fetch("/auth/register",{
         method:"POST",
@@ -26,7 +29,7 @@ async function register(event){
     if(result) {
         window.location.href = "home.html";
     } else {
-        alert("Username already exists");
+        showError("Username already exists");
     }
 }
 
@@ -36,11 +39,6 @@ async function login(event){
 
     const username = document.getElementById("loginUser").value.trim();
     const password = document.getElementById("loginPass").value.trim();
-
-    if (username === "" || password === "") {
-        alert("Fill in all fields");
-        return;
-    }
 
     const response = await fetch("/auth/login",{
         method:"POST",
@@ -58,6 +56,6 @@ async function login(event){
     if (result) {
        window.location.href = "home.html";
     } else {
-        alert("Login failed");
+        showError("Login failed");
     }
 }

@@ -119,6 +119,17 @@ h2 {
     background-color: #590600;
 }
 
+.error-message {
+    color: #ff0000;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
 @keyframes logoFloat {
     0%, 100% {
         transform: translateY(0);
